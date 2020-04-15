@@ -1,0 +1,26 @@
+<view class="head" >
+  <button class="btn" type="primary" bindtap="run">{{running?'pause':'start'}}</button>
+  <button class="btn" type="primary" bindtap="clear">clear data</button>
+</view>
+<view class="counter">
+  <text space="nbsp">Journey:{{util.toKM(meters)}}km     time:{{util.formatHour(second)}}</text>
+</view>
+
+<wxs module="util">
+function formatHour(second){
+  return Math.floor(second/3600)+":"+Math.floor((second % 3600)/60)+":"+(second % 60)
+}
+function toKM(meter){
+  return (meter/1000).toFixed(2)
+}
+module.exports = {
+  formatHour : formatHour,
+  toKM:toKM
+}
+</wxs>
+<map
+  class="mapView"
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  markers="{{markers}}"
+  />

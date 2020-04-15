@@ -1,0 +1,19 @@
+{
+  "pages":[
+    "run"
+    
+  ],
+  "permission":{
+    "scope.userLocation":{
+      "desc":"get your position。"
+    }
+  },
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "happyrun",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
